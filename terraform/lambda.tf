@@ -26,7 +26,7 @@ resource "aws_lambda_function" "http_lambda" {
   package_type  = "Image"
   image_uri     = "${aws_ecr_repository.this.repository_url}:v6"
 
-  memory_size = 512
+  memory_size = 128
   timeout     = 10
 
   vpc_config {
